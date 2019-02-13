@@ -1,0 +1,204 @@
+.price {
+  margin: 140px 0;
+
+  p {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    line-height: 29px;
+    text-align: center;
+    color: $advantages-gray;
+  }
+
+  .price__divider {
+    @include devider($advantages-gray);
+  }
+
+  .price__title {
+    font-size: 36px;
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+    color: $advantages-title;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .price__block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 40px 0;
+  }
+
+  .price__element {
+    flex-basis: 32.4%;
+    margin-top: 20px;
+    background-color: $white-gray;
+
+    &:hover {
+
+      .price__top {
+
+        background-color: $red;
+        transition-duration: 500ms;
+
+      }
+
+      .price__bottom {
+
+        .price__number {
+
+          p {
+
+            color: $red;
+
+          }
+        }
+      }
+    }
+
+    .price__top {
+      background-color: $advantages-gray;
+      padding-bottom: 90px;
+
+      .price__name {
+        color: $white;
+        font-weight: 600;
+        font-size: 24px;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 50px 0;
+      }
+    }
+
+    .price__bottom {
+      padding-bottom: 20px;
+
+      .price__number {
+        width: 174px;
+        background-color: $white;
+        border: 10px solid rgba(244, 245, 249, 0.25);
+        border-radius: 50%;
+        margin: -86px auto 0;
+        padding: 46px 0;
+
+        p {
+          font-size: 39px;
+          font-family: "Source Sans Pro";
+          font-weight: 700;
+          line-height: 40px;
+          margin: 0;
+          color: $advantages-gray;
+          transition-duration: 500ms;
+          transition-property: color;
+
+          span {
+            display: block;
+            font-size: 13px;
+            line-height: 21px;
+            font-weight: 400;
+            color: $advantages-gray;
+          }
+        }
+
+      }
+
+      .price__list {
+        margin: 40px 0;
+
+        li{
+
+          font-family: "Open Sans";
+          font-weight: 600;
+          color: $advantages-gray;
+          margin: 20px auto;
+          text-align: center;
+          font-size: 14px;
+        }
+      }
+
+      .price__btn {
+        @include btn($advantages-gray) {
+          width: 145px;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.12px;
+          padding: 13px 0;
+          display: block;
+          font-family: "Open Sans";
+          font-weight: 600;
+          margin: 30px auto;
+        };
+
+      }
+
+    }
+
+  }
+
+  .price__element--red {
+
+    .price__top {
+      background-color: $red;
+
+    }
+
+    .price__bottom {
+
+
+      .price__number {
+
+        p {
+          color: $red
+        }
+
+      }
+
+      .price__btn {
+        @include btn() {
+          width: 145px;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.12px;
+          padding: 13px 0;
+          display: block;
+          font-family: "Open Sans";
+          font-weight: 600;
+          margin: 30px auto;
+        };
+      }
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .price {
+    margin: 50px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .price {
+
+    .price__block {
+      justify-content: center;
+    }
+
+    .price__element {
+      flex-basis: 45%;
+      margin: 20px 2.5%;
+    }
+
+  }
+}
+
+@media (max-width: 580px) {
+  .price {
+
+    .price__element {
+      flex-basis: 100%;
+      margin: 15px 0;
+    }
+  }
+}

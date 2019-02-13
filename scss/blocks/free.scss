@@ -1,0 +1,57 @@
+.free {
+  background: url("../img/free-bg.jpg") center no-repeat;
+  background-size: cover;
+  padding: 140px 0;
+  text-align: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    z-index: 1;
+  }
+
+  .free__wrap {
+    position: relative;
+    z-index: 2;
+  }
+
+
+  .free__title {
+    font-size: 36px;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  p {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 29px;
+    text-align: center;
+    color: $white;
+    margin: 12px 0;
+  }
+
+  .free__btn {
+    @include btn() {
+      margin-top: 55px;
+    };
+  }
+}
+
+@media (max-width: 980px) {
+
+  .free {
+    padding: 50px 0;
+  }
+
+}
