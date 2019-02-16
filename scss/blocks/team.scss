@@ -3,7 +3,8 @@
   padding: 0 0 470px;
   background: url("../img/team-line.png") center bottom no-repeat,
               url("../img/team-bg.jpg") center no-repeat;
-  
+  z-index: 2;
+
   .team__wrap {
     position: relative;
   }

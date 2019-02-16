@@ -42,6 +42,13 @@ function js() {
         .pipe(dest('build/js'))
         .pipe(browserSync.reload({stream: true}));
 }
+
+function php() {
+    return src('*.php')
+        .pipe(dest('build'))
+        .pipe(browserSync.reload({stream: true}));
+}
+
 function css() {
     return src('css/**/*.css')
         .pipe(dest('build/css'))
@@ -109,6 +116,7 @@ function watch() {
     gulp.watch("*.html", html);
     gulp.watch("css/**/*.css", css);
     gulp.watch("js/**/*.js", js);
+    gulp.watch("*.php", php);
     gulp.watch("img/**/*.{png,jpg}", allimg);
     gulp.watch("img/**/*.{svg}", svg);
 
@@ -118,6 +126,7 @@ function watch() {
 gulp.task('styles', styles);
 gulp.task('html', html);
 gulp.task('js', js);
+gulp.task('php', php);
 gulp.task('css', css);
 gulp.task('allimg', allimg);
 gulp.task('images', images);
@@ -131,6 +140,7 @@ function copy() {
     return gulp.src([
         'img/**',
         'js/**',
+        '*.php',
         'css/**',
         '*.html'
     ], {
