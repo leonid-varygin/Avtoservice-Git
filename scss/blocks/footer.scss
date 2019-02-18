@@ -4,11 +4,11 @@
 
   .footer__wrap {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
   }
 
-  .footer__right {
+  .footer__right, .footer__left {
 
     p {
       font-family: "Open Sans";
@@ -16,6 +16,11 @@
       font-size: 14px;
       line-height: 24px;
       color: $advantages-gray;
+      
+      a {
+        color: $red;
+      }
+      
     }
 
   }
