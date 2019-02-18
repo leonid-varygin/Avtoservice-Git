@@ -6,7 +6,7 @@
 
   &::after {
     content: '';
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.65);
     display: block;
     position: absolute;
     z-index: 1;
@@ -109,6 +109,26 @@
         max-width: 100%;
       }
 
+    }
+  }
+}
+
+@media (max-width: 500px) {
+
+  .section-top {
+
+    .section-top__logo {
+      flex-basis: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .section-top__info {
+      padding-top: 15px;
+    }
+
+    .section-top__header {
+      padding: 15px 0;
     }
   }
 }

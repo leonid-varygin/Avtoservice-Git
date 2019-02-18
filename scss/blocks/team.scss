@@ -1,5 +1,5 @@
 .team {
-  margin-top: 140px;
+  //margin-top: 0px;
   padding: 0 0 470px;
   background: url("../img/team-line.png") center bottom no-repeat,
               url("../img/team-bg.jpg") center no-repeat;
@@ -27,7 +27,7 @@
     font-family: 'Source Sans Pro';
     font-weight: 700;
     color: $white;
-    padding-top: 150px;
+    padding-top: 70px;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -201,13 +201,13 @@
 
   .team {
     padding: 50px 0;
-    margin-top: 50px;
   }
 }
 
 @media (max-width: 768px) {
 
   .team {
+    padding: 0 0 50px;
 
     .team__elements {
       justify-content: center;
