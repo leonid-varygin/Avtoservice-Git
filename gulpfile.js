@@ -59,12 +59,12 @@ function images() {
             imagemin.jpegtran({progressive: true}),
             imageminJpegRecompress({
                 loops: 5,
-                min: 50,
-                max: 60,
+                min: 65,
+                max: 70,
                 quality: 'medium'
             }),
             imagemin.optipng({optimizationLevel: 3}),
-            pngquant[{quality: '50-60', speed: 5}],
+            pngquant[{quality: '65-70', speed: 5}],
 
         ]))
         .pipe(dest('build/img'))
