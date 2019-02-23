@@ -22,13 +22,13 @@ function styles() {
     return src('./scss/style.scss')
         .pipe(plumber())
         .pipe(sourceMaps.init())
-             .pipe(sass())
-             .pipe(autoprefixer({
-                 browsers: ['last 2 versions']
-             }))
-            .pipe(sourceMaps.write())
-            .pipe(gulp.dest('./build/css'))
-            .pipe(browserSync.reload({stream: true}));
+        .pipe(sass())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions']
+        }))
+        .pipe(sourceMaps.write())
+        .pipe(gulp.dest('./build/css'))
+        .pipe(browserSync.reload({stream: true}));
 }
 
 function html() {
@@ -42,13 +42,6 @@ function js() {
         .pipe(dest('build/js'))
         .pipe(browserSync.reload({stream: true}));
 }
-
-function php() {
-    return src('*.php')
-        .pipe(dest('build'))
-        .pipe(browserSync.reload({stream: true}));
-}
-
 function css() {
     return src('css/**/*.css')
         .pipe(dest('build/css'))
@@ -71,7 +64,7 @@ function images() {
                 quality: 'medium'
             }),
             imagemin.optipng({optimizationLevel: 3}),
-            // pngquant({quality: '65-70', speed: 5})
+            pngquant[{quality: '65-70', speed: 5}],
 
         ]))
         .pipe(dest('build/img'))
@@ -116,7 +109,6 @@ function watch() {
     gulp.watch("*.html", html);
     gulp.watch("css/**/*.css", css);
     gulp.watch("js/**/*.js", js);
-    gulp.watch("*.php", php);
     gulp.watch("img/**/*.{png,jpg}", allimg);
     gulp.watch("img/**/*.{svg}", svg);
 
@@ -126,21 +118,19 @@ function watch() {
 gulp.task('styles', styles);
 gulp.task('html', html);
 gulp.task('js', js);
-gulp.task('php', php);
 gulp.task('css', css);
 gulp.task('allimg', allimg);
 gulp.task('images', images);
 gulp.task('svg', svg);
 gulp.task('watch', watch);
 gulp.task('build', gulp.series(clean,copy,
-                        gulp.parallel(styles,images,svg)));
+    gulp.parallel(styles,images,svg)));
 
 
 function copy() {
     return gulp.src([
         'img/**',
         'js/**',
-        '*.php',
         'css/**',
         '*.html'
     ], {
