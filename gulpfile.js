@@ -140,6 +140,7 @@ function copy() {
     return gulp.src([
         'img/**',
         'js/**',
+        '*.php',
         'css/**',
         '*.html'
     ], {
