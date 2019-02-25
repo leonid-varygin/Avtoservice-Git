@@ -1,7 +1,7 @@
 <?php
 
 $recepient = "varygin.design@gmail.com";
-$siteName = "Autoservice";
+$siteName = "Автосервис «Авангард»";
 
 $name = trim($_POST["name"]);
 $phone = trim($_POST["phone"]);
