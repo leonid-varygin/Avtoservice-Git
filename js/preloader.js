@@ -5,4 +5,4 @@ window.onload = function () {
             preloader.classList.add('done');
         }
     }, 1000);
-}
+};
