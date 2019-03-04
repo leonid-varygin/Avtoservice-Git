@@ -10,7 +10,7 @@ $(document).ready(function() {
             data: $(this).serialize()
         }).done(function() {
             $('.js-overlay-thank-you').fadeIn();
-            yaCounter52532047.reachGoal('12345');
+            // yaCounter52587220.reachGoal('thanks');
             $(this).find('input').val('');
             $('#form').trigger('reset');
         });
